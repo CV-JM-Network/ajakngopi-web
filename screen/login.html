@@ -29,7 +29,7 @@
               id="password"
             />
             <span class="eye-icon" onclick="togglePassword()">
-              <img src="img/eye1.png" alt="Show password" id="eyeIcon" />
+              <img src="../img/eye1.png" alt="Show password" id="eyeIcon" />
             </span>
           </div>
         </div>
@@ -39,7 +39,7 @@
         <button class="sign-in-btn">Sign in</button>
         <button class="google-sign-in-button">
           <img
-            src="img/icon_google.png"
+            src="../img/icon_google.png"
             alt="Google icon"
             class="google-icon"
           />
@@ -61,11 +61,11 @@
 
         if (passwordField.type === "password") {
           passwordField.type = "text";
-          eyeIcon.src = "img/eye2.png";
+          eyeIcon.src = "../img/eye2.png";
           eyeIcon.alt = "Hide password";
         } else {
           passwordField.type = "password";
-          eyeIcon.src = "img/eye1.png";
+          eyeIcon.src = "../img/eye1.png";
           eyeIcon.alt = "Show password";
         }
       }
