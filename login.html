@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <h1>Welcome back</h1>
+        <p>Welcome back! Please enter your details.</p>
+
+        <div class="field">
+          <p>Email</p>
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="input-field"
+          />
+
+          <p>Password</p>
+          <div class="password-field">
+            <input
+              type="password"
+              placeholder="Password"
+              class="input-field"
+              id="password"
+            />
+            <span class="eye-icon" onclick="togglePassword()">
+              <img src="img/eye1.png" alt="Show password" id="eyeIcon" />
+            </span>
+          </div>
+        </div>
+
+        <a href="#" class="forgot-password">Forgot Password?</a>
+
+        <button class="sign-in-btn">Sign in</button>
+        <button class="google-sign-in-button">
+          <img
+            src="img/icon_google.png"
+            alt="Google icon"
+            class="google-icon"
+          />
+          Sign in with Google
+        </button>
+        <p class="signup-text">
+          Don’t have an account?
+          <span class="signup-link">Sign up for free</span>
+        </p>
+      </div>
+
+      <div class="right"></div>
+    </div>
+
+    <script>
+      function togglePassword() {
+        const passwordField = document.getElementById("password");
+        const eyeIcon = document.getElementById("eyeIcon");
+
+        if (passwordField.type === "password") {
+          passwordField.type = "text";
+          eyeIcon.src = "img/eye2.png";
+          eyeIcon.alt = "Hide password";
+        } else {
+          passwordField.type = "password";
+          eyeIcon.src = "img/eye1.png";
+          eyeIcon.alt = "Show password";
+        }
+      }
+    </script>
+  </body>
+</html>
